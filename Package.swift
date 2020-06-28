@@ -86,6 +86,7 @@ let package = Package(
                 .copy("DarkAqua.css"),
                 .process("Sparkle-Info.plist")
             ],
+            publicHeadersPath: "Sparkle/Other Sources",
             cSettings: cSettings
         ),
         .target(
@@ -164,16 +165,11 @@ let package = Package(
         ),
         .target(
             name: "ed25519",
-            path: "Vendor/ed25519",
+            path: "Vendor/ed25519/src",
             exclude: [
-                "ed25519_32.dll",
-                "ed25519_64.dll",
-                "license.txt",
-                "readme.md",
-                "src/precomp_data.h",
-                "test.c"
+                "precomp_data.h"
             ],
-            publicHeadersPath: "src"
+            publicHeadersPath: "."
         )
     ]
 )
