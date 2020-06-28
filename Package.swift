@@ -164,8 +164,15 @@ let package = Package(
         ),
         .target(
             name: "ed25519",
-            path: "Vendor/ed25519/src",
-            publicHeadersPath: "."
+            path: "Vendor/ed25519",
+            exclude: [
+                "ed25519_32.dll",
+                "ed25519_64.dll",
+                "license.txt",
+                "readme.md",
+                "test.c"
+            ],
+            publicHeadersPath: "src"
         )
     ]
 )
