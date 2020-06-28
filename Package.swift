@@ -86,7 +86,11 @@ let package = Package(
                 .copy("DarkAqua.css"),
                 .process("Sparkle-Info.plist")
             ],
-            cSettings: cSettings
+            cSettings: cSettings,
+            linkerSettings: [
+                .linkedLibrary("bz2"),
+                .linkedLibrary("xar")
+            ]
         ),
         .target(
             name: "Autoupdate",
