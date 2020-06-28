@@ -4,6 +4,8 @@
 //
 
 import Foundation
+import Common
+import Unarchiving
 
 class DeltaUpdate {
     let fromVersion: String

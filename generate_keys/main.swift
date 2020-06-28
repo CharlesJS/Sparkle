@@ -8,6 +8,7 @@
 
 import Foundation
 import Security
+import ed25519
 
 func findPublicKey() -> Data? {
     var item: CFTypeRef?

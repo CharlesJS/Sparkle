@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import Unarchiving
 
 func unarchive(itemPath: URL, archiveDestDir: URL, callback: @escaping (Error?) -> Void) {
     let fileManager = FileManager.default

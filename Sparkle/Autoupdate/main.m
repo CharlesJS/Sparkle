@@ -118,7 +118,7 @@ static const NSTimeInterval SUTerminationTimeDelay = 0.5;
 {
     NSBundle *theBundle = [NSBundle bundleWithPath:self.hostPath];
     SUHost *host = [[SUHost alloc] initWithBundle:theBundle];
-    
+
     NSString *fileOperationToolPath = [[[[NSBundle mainBundle] executablePath] stringByDeletingLastPathComponent] stringByAppendingPathComponent:@""SPARKLE_FILEOP_TOOL_NAME];
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:fileOperationToolPath]) {

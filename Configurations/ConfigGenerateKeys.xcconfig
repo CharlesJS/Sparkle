@@ -2,6 +2,6 @@
 
 #include "ConfigSwift.xcconfig"
 
-SWIFT_OBJC_BRIDGING_HEADER = generate_keys/Bridging-Header.h
+HEADER_SEARCH_PATHS = "$SRCROOT/Vendor"
 MACOSX_DEPLOYMENT_TARGET = 10.11
 PRODUCT_NAME = generate_keys

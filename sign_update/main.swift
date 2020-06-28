@@ -8,6 +8,7 @@
 
 import Foundation
 import Security
+import ed25519
 
 func parseKeysFromString(_ string: String) -> (Data, Data) {
     if string.count != 128 {

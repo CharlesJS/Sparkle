@@ -1,0 +1,4 @@
+module ed25519 [extern_c] {
+    header "ed25519/src/ed25519.h"
+    export *
+}

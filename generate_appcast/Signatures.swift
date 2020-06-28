@@ -4,6 +4,8 @@
 //
 
 import Foundation
+import Common
+import ed25519
 
 struct PrivateKeys {
     var privateDSAKey: SecKey?

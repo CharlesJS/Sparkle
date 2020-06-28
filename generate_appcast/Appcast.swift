@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import Common
 
 // Maximum number of delta updates (per OS).
 let maxDeltas = 5

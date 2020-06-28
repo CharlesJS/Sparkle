@@ -227,7 +227,14 @@ func main() {
         }
 
         for (appcastFile, updates) in allUpdates {
-            let appcastDestPath = URL(fileURLWithPath: appcastFile, relativeTo: archivesSourceDir)
+            let appcastDestPath: URL
+                
+            if #available(macOS 10.11, *) {
+                appcastDestPath = URL(fileURLWithPath: appcastFile, relativeTo: archivesSourceDir)
+            } else {
+                appcastDestPath = URL(string: appcastFile, relativeTo: archivesSourceDir)!
+            }
+            
             try writeAppcast(appcastDestPath: appcastDestPath, updates: updates)
             print("Written", appcastDestPath.path, "based on", updates.count, "updates")
         }
