@@ -170,6 +170,7 @@ let package = Package(
                 "ed25519_64.dll",
                 "license.txt",
                 "readme.md",
+                "src/precomp_data.h",
                 "test.c"
             ],
             publicHeadersPath: "src"
